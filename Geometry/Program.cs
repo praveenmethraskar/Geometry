@@ -20,13 +20,20 @@ namespace Geometry
             //int line = (int)Math.Sqrt(Math.Pow(x2 - x1, 2) + (Math.Pow(y2 - y1, 2) * 1.0));
             //Console.WriteLine("Length of a Line " + line);
 
-            if ((a1/a2 == b1/b2) && (a1/a2 == c1/c2) && (b1/b2 == c1/c2))
+            int line1 = (int)Math.Sqrt(Math.Pow(a2 - a1, 2) + Math.Pow(b2 - b1, 2));
+            int line2 = (int)Math.Sqrt(Math.Pow(b2 - b1,2) + Math.Pow(c2 - c1, 2));
+
+            if (line1 < line2)
             {
-                Console.WriteLine("The given straight are identical");
+                Console.WriteLine("The line2 is greate");
+            }
+            else if (line1 > line2)
+            {
+                Console.WriteLine("The line1 is greater");
             }
             else
             {
-                Console.WriteLine("The given straight are not identical");
+                Console.WriteLine("The lines are equal");
             }
 
         }
